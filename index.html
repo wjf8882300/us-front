@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>后台管理系统</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+	<!--Header-part-->
+	<div id="header">
+	  <h1><a href="/">后台管理系统</a></h1>
+	</div>
+	<!--close-Header-part--> 
+	
+	<div id="user-nav" class="navbar navbar-inverse">
+	  <ul class="nav" style="width: auto; margin: 0px;">
+	    <li class="">
+	    	<a title="" href="#" id="logout"><i class="icon icon-share-alt"></i> <span class="text"></span></a>
+	    </li>
+	  </ul>
+	</div>
+	
+	<!--sidebar-menu-->
+	<div id="sidebar" class="sidebar">
+	  <ul>
+	  	  <li class="submenu"><a href="#"><i class="icon icon-navicon-round"></i> <span>系统管理</span></a><b class="arrow fa fa-angle-down"></b>
+	  	  <ul>
+	  	  		<li><a href="javascript:void(0)" to-url="html/user/list.html" nav-n="用户管理,user-nav"><i class="icon icon-user"></i><span style="margin-left:10px;">用户管理</span></a></li>
+				<li><a href="javascript:void(0)" to-url="html/user/list.html" nav-n="试题管理,question-nav"><i class="icon icon-file"></i><span style="margin-left:10px;">试题管理</span></a></li>
+				<li><a href="javascript:void(0)" to-url="html/user/list.html" nav-n="评分管理,score-nav"><i class="icon icon-star"></i><span style="margin-left:10px;">评分管理</span></a></li>
+	  	  </ul>
+	      </li>
+	  </ul>
+	</div>
+	<!--sidebar-menu-->
+	
+	<div id="content">	
+	<!--main-container-part-->
+	<div class="main-content">
+		<div id="layout1" class="l-layout mylayout" style="width: 99.2%; margin: 2px auto 0px; height: 446px;background-color: #ffffff;"> 
+			<div position="center" id="framecenter" > 
+	        </div>
+		</div>
+	</div>
+	<!--end-main-container-part-->
+	</div>
+	
+	<!--Footer-part-->
+	<!-- <div class="row-fluid">
+	  <div id="footer" class="span12"> 2016 &copy; 锋锋科技</div>
+	</div> -->
+	<!--end-Footer-part-->
+	<script src="js/lib/requirejs/require.js" require-module="page/index" data-main="js/main.js"></script>	
+</body>
+</html>
