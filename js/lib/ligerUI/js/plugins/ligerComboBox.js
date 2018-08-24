@@ -528,7 +528,7 @@
             if (value > 20)
             {
                 g.wrapper.css({ width: value });
-                g.inputText.css({ width: value - 14 });
+                g.inputText.css({ width: value - 20 });
                 if (!p.selectBoxWidth)
                 {
                     g.selectBox.css({ width: value });

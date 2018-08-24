@@ -8,17 +8,18 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 		grid = $("#maingrid4").ligerGrid({
 	        checkbox: true,
 	        columns: [
-	        { display: '登录用户名', name: 'loginName'},
-	        { display: '身份证名称', name: 'custName'},
-	        { display: '身份证号码', name: 'credentialsCode'}, 
-	        { display: '电话', name: 'mobile' },
-	        { display: '状态', name: 'recordStatus'}
+	        { display: '姓名', name: 'userName'},
+	        { display: '班级', name: 'className'},
+	        { display: '学号/工号', name: 'userNo'}, 
+	        { display: '所在支部', name: 'teamName' },
+			{ display: '支部书记', name: 'teamLeader'},
+			{ display: '辅导员', name: 'teacher'}
 	        ], 
 	        url:Constant.user.queryAll,
 	        parms:null,
 	        contentType:"application/json",
-	        root:"data",
-	        record:"iTotalDisplayRecords",
+	        root:"rows",
+	        record:"total",
 	        rownumbers:false,
 	        pageParmName:"start",
 	        pagesizeParmName:"length",
@@ -27,6 +28,12 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 	        width: '100%',
 	        height:'97%',
 	        onSuccess:function(data, grid) {
+				console.log(data);
+				if(data.code == 200) {
+					if(data.hasOwnProperty("data")){
+						data = {Rows:data.data.list, Total:data.data.total}; 
+					}  
+				}
 	        	Common.gridCheck.checkedCustomer = [];
 	        },
 			onCheckRow: Common.gridCheck.f_onCheckRow, 

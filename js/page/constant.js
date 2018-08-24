@@ -18,10 +18,10 @@ define(function() {
 		user: {
 			list:"list.html", //列表页面
 			detail:"detail.html", //详细页面
-			queryAll:"/ck/user/queryAllUser", //列表页面表格数据
-			save:"/ck/user/saveUser",
-			del:"/ck/user/deleteUser",
-			queryById:"/ck/user/queryById"
+			queryAll:"/university/user/queryAll", //列表页面表格数据
+			save:"/university/user/saveUser",
+			del:"/university/user/deleteUser",
+			queryById:"/university/user/queryById"
 		},
 		
 		/**
@@ -30,10 +30,10 @@ define(function() {
 		role: {
 			list:"/html/role/list.html",
 			detail:"/html/role/detail.html",
-			queryAll:"/ck/role/queryAll",
-			save:"/ck/role/saveRole",
-			del:"/ck/role/deleteRole",
-			queryById:"/ck/role/queryById",
+			queryAll:"/university/role/queryAll",
+			save:"/university/role/saveRole",
+			del:"/university/role/deleteRole",
+			queryById:"/university/role/queryById",
 			grant:"/html/role/grant.html"			
 		},
 		
@@ -43,11 +43,11 @@ define(function() {
 		menu: {
 			list:"/html/menu/list.html",
 			detail:"/html/menu/detail.html",
-			queryAll:"/ck/menu/queryAll",
-			save:"/ck/menu/saveMenu",
-			del:"/ck/menu/deleteMenu",
-			queryById:"/ck/menu/queryById",
-			queryByRoleId:"/ck/menu/queryByRoleId"
+			queryAll:"/university/menu/queryAll",
+			save:"/university/menu/saveMenu",
+			del:"/university/menu/deleteMenu",
+			queryById:"/university/menu/queryById",
+			queryByRoleId:"/university/menu/queryByRoleId"
 		}
 	};
 });
