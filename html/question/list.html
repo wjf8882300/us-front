@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>角色管理</title>
+<title>试题管理</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../css/bootstrap.min.css" />
 <link rel="stylesheet" href="../../css/bootstrap-responsive.min.css" />
@@ -37,6 +37,20 @@
 	    overflow-x: hidden; 
 	    overflow-y: hidden;
 	}
+	
+	.fileinput-button {
+         position: relative;
+         display: inline-block;
+         overflow: hidden;
+     }
+
+     .fileinput-button input{
+         position: absolute;
+         left: 0px;
+         top: 0px;
+         opacity: 0;
+         -ms-filter: 'alpha(opacity=0)';
+     }
 </style>
 </head>
 <body>
@@ -44,23 +58,40 @@
 			<form class="form-inline" id="searchForm" name="searchForm">
 				<div class="control-group">
                   <div class="controls">
-                    <label class="control-label">角色名称</label>
-                    <input id="username" type="text" name="username" class="ui-wizard-content">
+                    <label class="control-label">试题类型</label>
+                    <select class="form-control" id="questionGroup">
+                    	  <option value="">全部</option>
+                    	  <option value="0">学生</option>
+					      <option value="1">支部书记</option>
+					      <option value="2">辅导员</option>
+                    </select>
                     <input id="bntSearch" class="btn btn-primary ui-wizard-content ui-formwizard-button" type="button" value="查询">
                   </div>
                 </div>	
-                <div class="control-group">  
+                	
+			</form>
+			
+			<form class="form-inline" id="uploadForm" name="uploadForm" enctype="multipart/form-data">
+			<div class="control-group">  
                   <div class="controls">
-	              <button type="button" class="btn btn-success" id="bntAdd">新增</button>
-	              <button type="button" class="btn btn-info" id="bntUpdate">编辑</button>
-	              <button type="button" class="btn btn-danger" id="bntDelete">删除</button>
-	              <button type="button" class="btn btn-grey marR10" id="bntPermissions">分配权限</button>
+	              <span class="btn btn-success fileinput-button" >
+			            <span>上传学生试题</span>
+			            <input type="file" id="ctn-input-file-00" name="file">
+			        </span>
+			        <span class="btn btn-success fileinput-button" >
+			            <span>上传支部书记试题</span>
+			            <input type="file" id="ctn-input-file-01" name="file">
+			        </span>
+			        <span class="btn btn-success fileinput-button" >
+			            <span>上传辅导员试题</span>
+			            <input type="file" id="ctn-input-file-02" name="file">
+			        </span>
 	              </div>
-                </div>	
+             </div>
 			</form>
 			
 			<div id="maingrid4" style="margin:0; padding:0"></div> 
 	</div>
-	<script src="/js/lib/requirejs/require.js" require-module="page/role/role" data-main="/js/main.js"></script>	
+	<script src="/js/lib/requirejs/require.js" require-module="page/question/question" data-main="/js/main.js"></script>	
 </body>
 </html>
