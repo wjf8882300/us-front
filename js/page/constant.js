@@ -19,7 +19,7 @@ define(function() {
 			list:"list.html", //列表页面
 			detail:"detail.html", //详细页面
 			queryAll:"/university/user/queryAll", //列表页面表格数据
-			save:"/university/user/saveUser",
+			uploadExcel:"/university/user/import", // 导入用户
 			del:"/university/user/deleteUser",
 			queryById:"/university/user/queryById"
 		},

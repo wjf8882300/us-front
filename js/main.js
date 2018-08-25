@@ -5,7 +5,7 @@ require.config({
 	
     paths : {
     	'domReady'				: 'lib/requirejs/domReady',
-        "jquery" 				: "lib/jquery/jquery-1.7.2.min",
+        "jquery" 				: "lib/jquery/jquery-3.3.1.min",
         "jquery.cookie" 		: "lib/jquery-plugins/jquery.cookie", 
         "jquery.dataTables.min" : "lib/jquery-plugins/jquery.dataTables.min", 
         "jquery.flot.min" 		: "lib/jquery-plugins/jquery.flot.min", 
