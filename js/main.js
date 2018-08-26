@@ -18,6 +18,7 @@ require.config({
         "jquery.uniform" 		: "lib/jquery-plugins/jquery.uniform", 
         "jquery.validate" 		: "lib/jquery-plugins/jquery.validate", 
         "jquery.wizard" 		: "lib/jquery-plugins/jquery.wizard", 
+        "jquery.typeahead" 		: "lib/jquery-plugins/jquery.typeahead", 
         "messages_cn" 			: "lib/jquery-plugins/messages_cn", 
         
         "bootstrap.min" 		: "lib/bootstrap/bootstrap.min", 
@@ -87,8 +88,8 @@ require.config({
         "bootstrap-wysihtml5" 	: ["jquery", "bootstrap.min"],
         "excanvas.min" 			: "jquery", 
         "fullcalendar.min" 		: "jquery", 
-        "masked" 				: "jquery", 
-        "matrix.popover" 		: ["jquery", "bootstrap.min"],
+        "masked" 				: ["jquery"],
+        "matrix.popover" 		: ["jquery", "jquery.typeahead", "bootstrap.min"],
         "matrix" 				: ["jquery", "bootstrap.min", "matrix.popover"], 
         "matrix.calendar" 		: ["jquery", "bootstrap.min", "matrix"], 
         "matrix.charts" 		: ["jquery", "bootstrap.min", "matrix"], 

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>菜单管理</title>
+<title>评分管理</title>
 <link rel="stylesheet" href="../../css/bootstrap.min.css" />
 <link rel="stylesheet" href="../../css/bootstrap-responsive.min.css" />
 <link rel="stylesheet" href="../../css/fullcalendar.css" />
@@ -42,24 +42,45 @@
 <body>
 	<div id="wrapper">
 			<form class="form-inline" id="searchForm" name="searchForm">
-				<div class="control-group">
+				<!-- <div class="control-group">
                   <div class="controls">
-                    <label class="control-label">菜单名称</label>
-                    <input id="menuname" type="text" name="menuname" class="ui-wizard-content">
+                    <label class="control-label">用户类型</label>
+                    <select class="form-control" id="questionGroup">
+                    	  <option value="">全部</option>
+                    	  <option value="0">学生</option>
+					      <option value="1">支部书记</option>
+					      <option value="2">辅导员</option>
+                    </select>
                     <input id="bntSearch" class="btn btn-primary ui-wizard-content ui-formwizard-button" type="button" value="查询">
                   </div>
-                </div>	
+                </div>	 -->
                 <div class="control-group">  
                   <div class="controls">
-	              <button type="button" class="btn btn-success" id="bntAdd">新增</button>
-	              <button type="button" class="btn btn-info" id="bntUpdate">编辑</button>
-	              <button type="button" class="btn btn-danger" id="bntDelete">删除</button>
+	              <button type="button" class="btn btn-success" id="bntExportStudent">导出学生评分</button>
+	              <button type="button" class="btn btn-info" id="bntExportLeader">导出支部书记评分</button>
+	              <button type="button" class="btn btn-danger" id="bntExportTeacher">导出辅导员评分</button>
 	              </div>
                 </div>	
 			</form>
 			
-			<div id="maingrid4" style="margin:0; padding:0"></div> 
+			<!-- <div id="maingrid4" style="margin:0; padding:0"></div> -->
+			<ul id="myTab" class="nav nav-tabs">
+			    <li class="active"><a href="#student" data-toggle="tab">学生评分</a></li>
+			    <li><a href="#leader" data-toggle="tab">支部书记评分</a></li>
+			    <li><a href="#teacher" data-toggle="tab">辅导员评分</a></li>
+			</ul>
+			<div id="myTabContent" class="tab-content">
+			    <div class="tab-pane fade in active" id="student">
+			        <div id="maingrid1" style="margin:0; padding:0"></div>
+			    </div>
+			    <div class="tab-pane fade" id="leader">
+			        <div id="maingrid2" style="margin:0; padding:0"></div>
+			    </div>
+			    <div class="tab-pane fade" id="teacher">
+			        <div id="maingrid3" style="margin:0; padding:0"></div>
+			    </div>
+			</div> 
 	</div>
-	<script src="/js/lib/requirejs/require.js" require-module="page/menu/menu" data-main="/js/main.js"></script>	
+	<script src="../../js/lib/requirejs/require.js" require-module="page/score/score" data-main="../../js/main.js"></script>	
 </body>
 </html>

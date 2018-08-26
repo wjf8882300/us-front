@@ -76,7 +76,7 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 
 	$("#bntSearch").click(function()
 	{
-		grid.setParm("loginName", $("#username").val());
+		grid.setParm("userName", $("#username").val());
 		grid.loadData(grid.url);
 	});
 

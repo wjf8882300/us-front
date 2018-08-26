@@ -1,4 +1,4 @@
-define(["jquery", "Common", "Constant", "ligerui.ligerTab", "ligerui.ligerLayout", "ligerui.ligerMenu", "bootstrap.min", "matrix"], function($, Common, Constant){
+define(["jquery", "Common", "Constant", "ligerui.ligerTab", "ligerui.ligerLayout", "ligerui.ligerMenu", "jquery.typeahead", "bootstrap.min", "matrix"], function($, Common, Constant){
 	
 	var tab = null;
 	var accordion = null;
