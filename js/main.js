@@ -19,7 +19,6 @@ require.config({
         "jquery.validate" 		: "lib/jquery-plugins/jquery.validate", 
         "jquery.wizard" 		: "lib/jquery-plugins/jquery.wizard", 
         "jquery.typeahead" 		: "lib/jquery-plugins/jquery.typeahead", 
-        "messages_cn" 			: "lib/jquery-plugins/messages_cn", 
         
         "bootstrap.min" 		: "lib/bootstrap/bootstrap.min", 
         "bootstrap-colorpicker" : "lib/bootstrap/bootstrap-colorpicker", 
@@ -77,7 +76,6 @@ require.config({
         "jquery.ui.custom" 		: "jquery",
         "jquery.validate" 		: "jquery",
         "jquery.wizard" 		: "jquery",
-        "messages_cn" 			: ["jquery", "jquery.validate"],
         
         "des" 					: "jquery",
         "json2"					: "jquery",
