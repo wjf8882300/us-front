@@ -9,6 +9,7 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 		grid = $("#maingrid4").ligerGrid({
 	        checkbox: true,
 	        columns: [
+	        { display: '类型', name: 'userType'},	
 	        { display: '姓名', name: 'userName'},
 	        { display: '班级', name: 'className'},
 	        { display: '学号/工号', name: 'userNo'}, 
@@ -76,6 +77,7 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 
 	$("#bntSearch").click(function()
 	{
+		grid.setParm("userType", $("#userType").val());
 		grid.setParm("userName", $("#username").val());
 		grid.loadData(grid.url);
 	});

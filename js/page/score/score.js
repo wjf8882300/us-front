@@ -14,7 +14,7 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 		        { display: '班级', name: 'className', minWidth:150},
 		        { display: '学号/工号', name: 'userNo', minWidth:150}, 
 		        { display: '所在支部', name: 'teamName', minWidth:150},
-				{ display: '成绩', name: 'score', minWidth:150}        
+				{ display: '成绩', name: 'answer', minWidth:150}        
 	        ], 
 	        url:Constant.score.queryAllStudent,
 	        parms:{"userType":"0"},
