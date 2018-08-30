@@ -82,6 +82,7 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 	$("#bntSearch").click(function()
 	{
 		grid.setParm("questionGroup", $("#questionGroup").val());
+		grid.setParm("keys", $("#keys").val());
 		grid.loadData(grid.url);
 	});
 

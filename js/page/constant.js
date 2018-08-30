@@ -41,6 +41,13 @@ define(function() {
 			exportAllStudent:"/university/answer/exportAllStudent",
 			exportAllLeader:"/university/answer/exportAllLeader",
 			exportAllTeacher:"/university/answer/exportAllTeacher",
-		}
+		},
+		/**
+		 * 用户管理
+		 */
+		attachement: {
+			list:"/html/files/list.html", //列表页面
+			query:"/university/attachement/query", //列表页面表格数据
+		},
 	};
 });
