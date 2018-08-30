@@ -14,7 +14,7 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 			     { display: '附件',name:'attachementPath',
 			    	 render:function(rowData){
 //			    		 return "<img  src='/"+rowData.attachementPath+"' width='30px' height='40px' />";
-			    		 return "<img id='"+rowData.id+"'  src='/"+rowData.attachementPath+"' width='30px' height='40px' onclick='getImgNaturalDimensions(this, f_open)' />";
+			    		 return "<img id='"+rowData.id+"'  src='/"+rowData.attachementPath+"' hint='双击行可以预览' width='30px' height='40px' onclick='getImgNaturalDimensions(this, f_open)' />";
                      }
 			     }
 			],
