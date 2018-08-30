@@ -5,7 +5,6 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 		grid =$("#maingrid4").ligerGrid({
 			checkbox:false,
 			columns:[
-				{ name:'id', hide:false},
 				{ display: '学号', name:'userNo'},
 			     { display: '名称', name:'userName'},
 			     { display: '班级', name:'className'},
@@ -35,11 +34,11 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 			},
 			//双击某行触发函数
 			onDblClickRow : function (data, rowindex, rowobj){
-				getImgNaturalDimensions($("#" + data.id), f_open);
+				getImgNaturalDimensions(document.getElementById(data.id), f_open);
             }, 
 //			onCheckRow: Common.gridCheck.f_onCheckRow, 
 //			onCheckAllRow: Common.gridCheck.f_onCheckAllRow,
-		})
+		});
 	};
 
 	$("#bntSearch").click(function()
