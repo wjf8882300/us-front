@@ -6,7 +6,7 @@ define(["jquery", "Common", "Constant", "ligerui.ligerTab", "ligerui.ligerLayout
 	var tabItems = [];
 
 	var init = function() {
-				
+	
 		$("[to-url]").each(function () {			
 			$(this).bind("click",function(){
 					var nav = $(this).attr("nav-n");
@@ -46,6 +46,8 @@ define(["jquery", "Common", "Constant", "ligerui.ligerTab", "ligerui.ligerLayout
 						.click();
 			}
 		}
+		
+		f_addTab('index', '首页', 'html/main.html');
 	}
 
 	function f_heightChanged(options)

@@ -15,6 +15,7 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 		        { display: '班级', name: 'className', minWidth:150},
 		        { display: '学号/工号', name: 'userNo', minWidth:150}, 
 		        { display: '所在支部', name: 'teamName', minWidth:150},
+		        { display: '题号', name: 'questionSort', minWidth:150},
 				{ display: '成绩', name: 'answer', minWidth:150}        
 	        ], 
 	        url:Constant.score.queryAllStudent,
@@ -44,7 +45,8 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 		        { display: '班级', name: 'className', minWidth:150},
 		        { display: '学号/工号', name: 'userNo', minWidth:150}, 
 		        { display: '所在支部', name: 'teamName', minWidth:150},
-				{ display: '成绩', name: 'score', minWidth:150} 
+		        { display: '题号', name: 'questionSort', minWidth:150},
+				{ display: '成绩', name: 'answer', minWidth:150} 
 	        ], 
 	        url:Constant.score.queryAllLeader,
 	        parms:{"userType":"1"},
@@ -73,7 +75,8 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 		        { display: '班级', name: 'className', minWidth:150},
 		        { display: '学号/工号', name: 'userNo', minWidth:150}, 
 		        { display: '所在支部', name: 'teamName', minWidth:150},
-				{ display: '成绩', name: 'score', minWidth:150}  
+		        { display: '题号', name: 'questionSort', minWidth:150},
+				{ display: '成绩', name: 'answer', minWidth:150}  
 	        ], 
 	        url:Constant.score.queryAllTeacher,
 	        parms:{"userType":"2"},
@@ -179,6 +182,13 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 		grid.setParm("teamName", $("#teamname").val());
 		grid.setParm("className", $("#classname").val());
 		grid.loadData(stuGrid.url);
+	});
+	
+	$("#bntClear").click(function() {
+		$("#username").val("");
+		$("#userno").val("");
+		$("#teamname").val("");
+		$("#classname").val("");
 	});
 
 	return {
