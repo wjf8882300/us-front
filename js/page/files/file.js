@@ -5,6 +5,7 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 		grid =$("#maingrid4").ligerGrid({
 			checkbox:false,
 			columns:[
+				{ name:'id', hide:false},
 				{ display: '学号', name:'userNo'},
 			     { display: '名称', name:'userName'},
 			     { display: '班级', name:'className'},
@@ -12,7 +13,8 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 			     { display: '辅导员', name:'teacher'},
 			     { display: '附件',name:'attachementPath',
 			    	 render:function(rowData){
-			    		 return "<img  src='/"+rowData.attachementPath+"' width='30px' height='40px' >";
+//			    		 return "<img  src='/"+rowData.attachementPath+"' width='30px' height='40px' />";
+			    		 return "<img id='"+rowData.id+"'  src='/"+rowData.attachementPath+"' width='30px' height='40px' onclick='getImgNaturalDimensions(this, f_open)' />";
                      }
 			     }
 			],
@@ -32,11 +34,11 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 				Common.gridCheck.checkedCustomer = [];
 			},
 			//双击某行触发函数
-//			onDblClickRow : function (row, index, data){
-//		         $.ligerDialog.alert('选择的是' + data.attachementPath);
-//            }, 
-			onCheckRow: Common.gridCheck.f_onCheckRow, 
-			onCheckAllRow: Common.gridCheck.f_onCheckAllRow,
+			onDblClickRow : function (data, rowindex, rowobj){
+				getImgNaturalDimensions($("#" + data.id), f_open);
+            }, 
+//			onCheckRow: Common.gridCheck.f_onCheckRow, 
+//			onCheckAllRow: Common.gridCheck.f_onCheckAllRow,
 		})
 	};
 
@@ -45,8 +47,49 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 		grid.setParm("username", $("#username").val());
 		grid.loadData(grid.url);
 	});
+
+	getImgNaturalDimensions = function(oImg, callback) {
+		var nWidth, nHeight;
+		if (!oImg.naturalWidth) { // 现代浏览器
+			nWidth = oImg.naturalWidth;
+			nHeight = oImg.naturalHeight;
+			callback({
+				w : nWidth,
+				h : nHeight,
+				url: oImg.src
+			});
+		} else { // IE6/7/8
+			var nImg = new Image();
+
+			nImg.onload = function() {
+				var nWidth = nImg.width, nHeight = nImg.height;
+				callback({
+					w : nWidth,
+					h : nHeight,
+					url: oImg.src
+				});
+			}
+			nImg.src = oImg.src;
+		}
+	}
 	
-	
+	f_open = function(img) {
+		
+		$.ligerDialog.open({
+            height:img.h,
+            width: img.w,
+            title : '预览',
+            url: 'detail.html', 
+            showMax: false,
+            showToggle: true,
+            showMin: false,
+            isResize: true,
+            slide: false,
+            data: {
+                url: img.url
+            }
+        });
+	}
 	
 	return {
 		init:init
