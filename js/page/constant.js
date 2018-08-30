@@ -18,7 +18,9 @@ define(function() {
 		user: {
 			list:"list.html", //列表页面
 			queryAll:"/university/user/queryAll", //列表页面表格数据
-			uploadExcel:"/university/user/import" // 导入用户
+			uploadExcel:"/university/user/import", // 导入用户,
+			queryTeam:"/university/user/queryTeam", // 查询支部
+			queryClass:"/university/user/queryClass"// 查询班级
 		},
 		
 		/**

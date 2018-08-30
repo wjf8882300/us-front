@@ -3,6 +3,7 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 	var stuGrid = null;
 	var ledGrid = null;
 	var teaGrid = null;
+	var grid = null;
 	var init = function() {
 		/**
 		 * 记载列表
@@ -93,6 +94,52 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 	        onCheckRow: Common.gridCheck.f_onCheckRow,
 	        autoCheckChildren:false
 	    });
+		
+		grid = stuGrid;
+		
+		$.ajax({
+	        url: Constant.user.queryTeam,
+	        type: 'POST',
+	        contentType:'application/json',
+	        cache: false,
+	        data: {},
+	        processData: false,
+	        dataType:"json",
+	        success : function(data) {
+	            if (data.code == 200) {
+	            	var result = data.data;
+	            	$("#teamname").html("");
+				 	$("#teamname").append($("<option value=\"\">全部</option>"));
+				 	for(var i = 0; i < result.length; i++){
+						$("#teamname").append($("<option value=\""+result[i].teamName+"\">"+result[i].teamName+"</option>"));
+					}
+	            } else {
+	            	Common.warnMsg(data.message);
+	            }	            
+	        }
+	    });
+		
+		$.ajax({
+	        url: Constant.user.queryClass,
+	        type: 'POST',
+	        contentType:'application/json',
+	        cache: false,
+	        data: {},
+	        processData: false,
+	        dataType:"json",
+	        success : function(data) {
+	            if (data.code == 200) {
+	            	var result = data.data;
+	            	$("#classname").html("");
+				 	$("#classname").append($("<option value=\"\">全部</option>"));
+				 	for(var i = 0; i < result.length; i++){
+						$("#classname").append($("<option value=\""+result[i].className+"\">"+result[i].className+"</option>"));
+					}
+	            } else {
+	            	Common.warnMsg(data.message);
+	            }	            
+	        }
+	    });
 	};
 	
 	$("#bntExportStudent").click(function()
@@ -116,13 +163,23 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var activeTab = $(e.target).attr("href");
         if(activeTab == "#student") {
-        	stuGrid.loadData(stuGrid.url);
+        	grid = stuGrid;
         } else if(activeTab == "#leader") {
-        	ledGrid.loadData(ledGrid.url);
+        	grid = ledGrid;
         } else if(activeTab == "#teacher") {
-        	teaGrid.loadData(teaGrid.url);
+        	grid = teaGrid;
         }
+        
+        grid.loadData(stuGrid.url);
     });
+	
+	$("#bntSearch").click(function(){		
+		grid.setParm("userName", $("#username").val());
+		grid.setParm("userNo", $("#userno").val());
+		grid.setParm("teamName", $("#teamname").val());
+		grid.setParm("className", $("#classname").val());
+		grid.loadData(stuGrid.url);
+	});
 
 	return {
 		init:init

@@ -51,6 +51,10 @@
          opacity: 0;
          -ms-filter: 'alpha(opacity=0)';
      }
+     
+     .ui-wizard-content {
+     	width:100px;
+     }
 </style>
 </head>
 <body>
@@ -60,14 +64,23 @@
                   <div class="controls">
                     <label class="control-label">姓名</label>
                     <input id="username" type="text" name="username" class="ui-wizard-content">
+                    <label class="control-label">学号</label>
+                    <input id="userno" type="text" name="userno" class="ui-wizard-content">
                     <label class="control-label">用户类型</label>
-                    <select class="form-control" id="userType">
+                    <select id="userType" class="ui-wizard-content">
                     	  <option value="">全部</option>
                     	  <option value="0">学生</option>
 					      <option value="1">支部书记</option>
 					      <option value="2">辅导员</option>
                     </select>
+                    <label class="control-label">支部</label>
+                    <select id="teamname" class="ui-wizard-content">
+                    </select>
+                    <label class="control-label">班级</label>
+                    <select id="classname" class="ui-wizard-content">
+                    </select>
                     <input id="bntSearch" class="btn btn-primary ui-wizard-content ui-formwizard-button" type="button" value="查询">
+                    <input id="bntClear" class="btn btn-primary ui-wizard-content ui-formwizard-button" type="button" value="清空">
                   </div>
                 </div>	
                 	

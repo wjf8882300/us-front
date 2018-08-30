@@ -41,6 +41,50 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 			onCheckRow: Common.gridCheck.f_onCheckRow, 
 			onCheckAllRow: Common.gridCheck.f_onCheckAllRow
 	    });
+		
+		$.ajax({
+	        url: Constant.user.queryTeam,
+	        type: 'POST',
+	        contentType:'application/json',
+	        cache: false,
+	        data: {},
+	        processData: false,
+	        dataType:"json",
+	        success : function(data) {
+	            if (data.code == 200) {
+	            	var result = data.data;
+	            	$("#teamname").html("");
+				 	$("#teamname").append($("<option value=\"\">全部</option>"));
+				 	for(var i = 0; i < result.length; i++){
+						$("#teamname").append($("<option value=\""+result[i].teamName+"\">"+result[i].teamName+"</option>"));
+					}
+	            } else {
+	            	Common.warnMsg(data.message);
+	            }	            
+	        }
+	    });
+		
+		$.ajax({
+	        url: Constant.user.queryClass,
+	        type: 'POST',
+	        contentType:'application/json',
+	        cache: false,
+	        data: {},
+	        processData: false,
+	        dataType:"json",
+	        success : function(data) {
+	            if (data.code == 200) {
+	            	var result = data.data;
+	            	$("#classname").html("");
+				 	$("#classname").append($("<option value=\"\">全部</option>"));
+				 	for(var i = 0; i < result.length; i++){
+						$("#classname").append($("<option value=\""+result[i].className+"\">"+result[i].className+"</option>"));
+					}
+	            } else {
+	            	Common.warnMsg(data.message);
+	            }	            
+	        }
+	    });
 	};
 	
 	$("#ctn-input-file").on("change", function(){
@@ -79,8 +123,20 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 	{
 		grid.setParm("userType", $("#userType").val());
 		grid.setParm("userName", $("#username").val());
+		grid.setParm("userNo", $("#userno").val());
+		grid.setParm("teamName", $("#teamname").val());
+		grid.setParm("className", $("#classname").val());
 		grid.loadData(grid.url);
 	});
+	
+	$("#bntClear").click(function() {
+		$("#userType").val("");
+		$("#username").val("");
+		$("#userno").val("");
+		$("#teamname").val("");
+		$("#classname").val("");
+	});
+	
 
 	return {
 		init:init
