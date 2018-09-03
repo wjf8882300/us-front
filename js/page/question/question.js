@@ -5,9 +5,9 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 		grid =$("#maingrid4").ligerGrid({
 			checkbox:true,
 			columns:[
-			     { display: '题目名称', name:'questionContent'},
-			     { display: '分值', name:'questionScore'},
-			     { display: '说明',name:'questionDesc'}
+			     { display: '题目名称', name:'questionContent',width:600},
+			     { display: '分值', name:'questionScore',width:200},
+			     { display: '说明',name:'questionDesc',width:300}
 			],
 			url:Constant.question.queryAll,
 			parms:null,
