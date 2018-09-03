@@ -51,5 +51,14 @@ define(function() {
 			list:"/html/files/list.html", //列表页面
 			query:"/university/attachement/query", //列表页面表格数据
 		},
+		/**
+		 * 未评分管理
+		 */
+		waitScore: {
+			list:"/html/score/wait.html",
+			queryWaitStudent:"/university/answer/queryNotScoreStudent",
+			queryWaitLeader:"/university/answer/queryNotScoreLeader",
+			queryWaitTeacher:"/university/answer/queryNotScoreTeacher",
+		},
 	};
 });
