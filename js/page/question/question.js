@@ -3,12 +3,12 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 	var uploading = false;
 	var init = function() {
 		grid =$("#maingrid4").ligerGrid({
-			checkbox:true,
+			//checkbox:true,
 			columns:[
-			     { display: '题目名称', name:'questionContent',width:500},
-			     { display: '分值', name:'questionScore',width:150},
-			     { display: '说明',name:'questionDesc',width:250},
-			     { display: '创建时间',name:'createDate',width:200}
+			     { display: '题目名称', name:'questionContent',minWidth:300},
+			     { display: '分值', name:'questionScore', width: 60},
+			     { display: '说明',name:'questionDesc', width: 250},
+			     { display: '创建时间',name:'createDate', width: 150}
 			],
 			url:Constant.question.queryAll,
 			parms:null,
@@ -25,8 +25,8 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 			onSuccess:function(data,grid){
 				Common.gridCheck.checkedCustomer = [];
 			},
-			onCheckRow: Common.gridCheck.f_onCheckRow, 
-			onCheckAllRow: Common.gridCheck.f_onCheckAllRow,
+			//onCheckRow: Common.gridCheck.f_onCheckRow, 
+			//onCheckAllRow: Common.gridCheck.f_onCheckAllRow,
 		})
 	};
 	

@@ -10,12 +10,13 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 			     { display: '班级', name:'className'},
 			     { display: '所在支部', name:'teamName'},
 			     { display: '辅导员', name:'teacher'},
+			     { display: '上传时间', name:'createDate'},  
 			     { display: '附件',name:'attachementPath',
 			    	 render:function(rowData){
 //			    		 return "<img  src='/"+rowData.attachementPath+"' width='30px' height='40px' />";
 			    		 return "<img id='"+rowData.id+"'  src='/"+rowData.attachementPath+"' hint='双击行可以预览' width='30px' height='40px' onclick='getImgNaturalDimensions(this, f_open)' />";
                      }
-			     } ,  { display: '新增时间', name:'createDate'}
+			     } 
 			],
 			url:Constant.attachement.query,
 			parms:null,

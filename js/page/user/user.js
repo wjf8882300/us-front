@@ -16,7 +16,7 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 	        { display: '所在支部', name: 'teamName' },
 			{ display: '支部书记', name: 'teamLeader'},
 			{ display: '辅导员', name: 'teacher'},
-			{ display: '新增时间', name: 'createDate'}
+			{ display: '上传时间', name: 'createDate'}
 			
 	        ], 
 	        url:Constant.user.queryAll,
