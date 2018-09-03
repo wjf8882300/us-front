@@ -45,7 +45,7 @@ define(function() {
 			exportAllTeacher:"/university/answer/exportAllTeacher",
 		},
 		/**
-		 * 用户管理
+		 * 附件管理
 		 */
 		attachement: {
 			list:"/html/files/list.html", //列表页面

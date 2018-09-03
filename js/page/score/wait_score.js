@@ -39,11 +39,11 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 		ledGrid = $("#maingrid2").ligerGrid({
 	        checkbox: false,
 	        columns: [
-		        { display: '支部', name: 'teamName', minWidth:150},
-		        { display: '支部书记', name: 'teamLeader', minWidth:150},
-	        	{ display: '姓名', name: 'userName', minWidth:150},
+		        { display: '支部', name: 'teamName', minWidth:200},
+		        { display: '支部书记', name: 'teamLeader', minWidth:200},
+	        	{ display: '姓名', name: 'userName', minWidth:200},
 		        { display: '班级', name: 'className', minWidth:150},
-		        { display: '学号/工号', name: 'userNo', minWidth:150}, 
+		        { display: '学号/工号', name: 'userNo', minWidth:200}, 
 				{ display: '辅导员', name: 'teacher', minWidth:150} 
 	        ], 
 	        url:Constant.waitScore.queryWaitLeader,
@@ -67,11 +67,11 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 		teaGrid = $("#maingrid3").ligerGrid({
 	        checkbox: false,
 	        columns: [
-	        	{ display: '辅导员', name: 'teacher', minWidth:150} ,
-	        	{ display: '姓名', name: 'userName', minWidth:150},
+	        	{ display: '辅导员', name: 'teacher', minWidth:200} ,
+	        	{ display: '姓名', name: 'userName', minWidth:200},
 		        { display: '班级', name: 'className', minWidth:150},
-		        { display: '学号/工号', name: 'userNo', minWidth:150}, 
-		        { display: '支部', name: 'teamName', minWidth:150},
+		        { display: '学号/工号', name: 'userNo', minWidth:200}, 
+		        { display: '支部', name: 'teamName', minWidth:200},
 		        { display: '支部书记', name: 'teamLeader', minWidth:150}
 	        ], 
 	        url:Constant.waitScore.queryWaitTeacher,

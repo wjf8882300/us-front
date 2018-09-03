@@ -15,7 +15,7 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid"], function($, Common
 //			    		 return "<img  src='/"+rowData.attachementPath+"' width='30px' height='40px' />";
 			    		 return "<img id='"+rowData.id+"'  src='/"+rowData.attachementPath+"' hint='双击行可以预览' width='30px' height='40px' onclick='getImgNaturalDimensions(this, f_open)' />";
                      }
-			     }
+			     } ,  { display: '新增时间', name:'createDate'}
 			],
 			url:Constant.attachement.query,
 			parms:null,

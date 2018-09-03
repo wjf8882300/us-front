@@ -11,12 +11,13 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 		stuGrid = $("#maingrid1").ligerGrid({
 	        checkbox: true,
 	        columns: [
-	        	{ display: '姓名', name: 'userName', minWidth:150},
+	        	{ display: '姓名', name: 'userName', minWidth:100},
 		        { display: '班级', name: 'className', minWidth:150},
 		        { display: '学号/工号', name: 'userNo', minWidth:150}, 
 		        { display: '所在支部', name: 'teamName', minWidth:150},
-		        { display: '题号', name: 'questionSort', minWidth:150},
-				{ display: '成绩', name: 'answer', minWidth:150}        
+		        { display: '题号', name: 'questionSort', minWidth:100},
+				{ display: '成绩', name: 'answer', minWidth:100},
+				{ display: '评分时间', name: 'createDate', minWidth:150} 
 	        ], 
 	        url:Constant.score.queryAllStudent,
 	        parms:{"userType":"0"},
@@ -46,7 +47,8 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 		        { display: '学号/工号', name: 'userNo', minWidth:150}, 
 		        { display: '所在支部', name: 'teamName', minWidth:150},
 		        { display: '题号', name: 'questionSort', minWidth:150},
-				{ display: '成绩', name: 'answer', minWidth:150} 
+				{ display: '成绩', name: 'answer', minWidth:150} ,
+				{ display: '评分时间', name: 'createDate', minWidth:150} 
 	        ], 
 	        url:Constant.score.queryAllLeader,
 	        parms:{"userType":"1"},
@@ -76,7 +78,8 @@ define(["jquery", "Common", "Constant", "ligerui.ligerGrid", "bootstrap.min"], f
 		        { display: '学号/工号', name: 'userNo', minWidth:150}, 
 		        { display: '所在支部', name: 'teamName', minWidth:150},
 		        { display: '题号', name: 'questionSort', minWidth:150},
-				{ display: '成绩', name: 'answer', minWidth:150}  
+				{ display: '成绩', name: 'answer', minWidth:150} ,
+				{ display: '评分时间', name: 'createDate', minWidth:150}  
 	        ], 
 	        url:Constant.score.queryAllTeacher,
 	        parms:{"userType":"2"},
