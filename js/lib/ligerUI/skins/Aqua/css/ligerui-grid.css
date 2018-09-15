@@ -1,7 +1,4 @@
-﻿
-/* -----------------------
-   * 表格 *
-* ----------------------- */
+
 .l-grid-mask{
 	position:absolute;left:0;top:0;width:100%;height:100%; 
 	display1:none;font-size:1px; *zoom:1;overflow:hidden; display:none;z-index: 9000;
@@ -41,12 +38,10 @@ background: url('../images/panel/header-bg.gif') repeat-x left -1px; position:re
 .l-panel-header-hasicon{ padding-left:13px;}
 .l-panel-header img{ position:absolute; left:6px; top:5px; width:16px; height:16px; border:0px;}
 .l-panel-header-text{ line-height:22px;padding-left:10px;}
-
 .l-panel-body
 {
   position:relative; overflow:hidden; width:100%;
 }
-
 .l-panel .l-toolbar {
 	background:none;border:0;
 }
@@ -169,7 +164,6 @@ border-right: 1px solid #ccc;
 border-left: 1px solid #fff;
 padding-right: 10px;
 }
-
 .l-grid-popup tr:hover .l-column-right,.l-grid-popup tr.l-popup-row-over .l-column-right
 {
      border-right: 1px solid #d2e3ec;border-top: 1px solid #d2e3ec;border-bottom: 1px solid #d2e3ec;
@@ -196,7 +190,6 @@ padding-right: 10px;
 { 
       text-align:center;
 } 
-
 .l-grid-dragging-line
 {
     background:#EC4262;width:1px;position:absolute; display:none; z-index:9999; padding:0; margin:0;
@@ -289,9 +282,6 @@ padding-right: 10px;
 {
     height:22px; line-height:22px;
 }
-/*
-    detail
-*/
 .l-grid-detailpanel
 {
     border-right:1px solid #A3C0E8;border-bottom:1px solid #A3C0E8;
@@ -300,7 +290,6 @@ padding-right: 10px;
 {
      overflow:auto; margin-bottom:2px;
 }
-
 .l-grid-row-alt .l-grid-row-cell
 {
     background:#F5F5F5; 
@@ -337,7 +326,6 @@ padding-right: 10px;
 {
     background:url('../images/grid/grid-detail-open.gif') no-repeat 5px 5px;
 }
-
 .l-grid-row-cell-checkbox .l-grid-row-cell-inner{margin-left:0px; margin-right:0px;}
 .l-grid-row-cell-checkbox span,.l-grid-hd-cell-checkbox .l-grid-hd-cell-inner div
 {
@@ -360,7 +348,6 @@ padding-right: 10px;
 {
    padding:0; margin:0;
 }  
-
 .l-grid-row-cell-edited .l-grid-row-cell-inner
 {
     background-image:url('../images/icon/icon-edited.gif');
@@ -454,22 +441,12 @@ background: url(../images/icon/icon-loading.gif) no-repeat; background-position:
 {
     line-height:20px;
 }
-
-/*
-    grouping
-*/
 .l-grid .l-grid-grouprow{ border-right:1px solid #A3C0E8}
 .l-grid .l-grid-grouprow-cell{ padding:6px; border-bottom:1px solid #A3C0E8; background:#EAF3FF;}
 .l-grid .l-grid-group-togglebtn{background:url('../images/grid/grid-detail-open.gif') no-repeat center; cursor:pointer}
 .l-grid .l-grid-group-togglebtn-close{background:url('../images/grid/grid-detail-close.gif') no-repeat center;}
 .l-grid .l-grid-totalsummary-group td{ background-color:#F5EEFB; border-color:#F5EEFB;}
-/*
-    foot total
-*/
  .l-panel-bar-total{ background:#F5F9FF; padding:8px; border-top:1px solid #84A0C4;}
-/*
-    tree grid 
-*/
 .l-grid-tree-space  
 {
     width:18px; height:20px; line-height:20px; overflow:hidden; float:left;
@@ -482,17 +459,12 @@ background: url(../images/icon/icon-loading.gif) no-repeat; background-position:
 {
     cursor:pointer;background:url('../images/grid/grid-tree-close.gif') no-repeat center;
 }
-/*
-    frozen grid
-*/
 .l-grid1{  display:none;} 
 .l-grid1 .l-grid-body{overflow:hidden;}
 .l-grid1 .l-grid-detailpanel{border-right:1px solid white;}
 .l-frozen .l-grid2{position:absolute; top:0px; left:0px; width:100%; }
 .l-frozen .l-grid2 .l-grid-body{overflow-x:auto;}
 .l-frozen .l-grid1{position:absolute; top:0px; left:0px;display:block;}
-
-
 .l-grid-gray 
 {border-top:1px solid #DDDDDD;
 }
@@ -509,9 +481,6 @@ background: url(../images/icon/icon-loading.gif) no-repeat; background-position:
     border-bottom: 1px solid #DDDDDD;  
     border-right: 1px solid #DDDDDD;   
 }
-/*
-    菜单条
-*/
 .l-menubar
 {
     background: url('../images/panel/panel-menu.gif') repeat-x; height:24px; border:1px solid #ADBED6;border-top:1px solid #EFF7F7;
@@ -529,9 +498,6 @@ background: url(../images/icon/icon-loading.gif) no-repeat; background-position:
 .l-menubar-item-over
 { 
 }
-/*
-    工具条
-*/
 .l-toolbar
 {    
     background:#CEDFEF  url('../images/panel/panel-toolbar.gif') repeat-x; height:23px; 
@@ -547,9 +513,6 @@ background: url(../images/icon/icon-loading.gif) no-repeat; background-position:
 .l-toolbar-item-disable{cursor:default;}
 .l-toolbar-item-disable span{color: #A1A1A1;}
 .l-toolbar-item-color{border: 1px solid #ccc;position: absolute;width: 14px;height: 14px;left: 3px;top: 3px;}
-/*
-    搜索栏
-*/
 .l-panel-search
 {height:28px; padding-top:3px; padding-left:3px; 
  border-left:1px solid #99BBE8; border-right:1px solid #99BBE8;
@@ -558,10 +521,6 @@ background: url(../images/icon/icon-loading.gif) no-repeat; background-position:
 {
     float:left; margin-left:5px;
 }
-
-/*
-    编辑
-*/
 .l-grid-row-cell-editing-topcell {border-bottom-color:#CC8F81;}
 .l-grid-row-cell-editing-leftcell {border-right-color:#CC8F81;}
 .l-grid-row-cell-editing{ border-color:#CC8F81;}
@@ -570,7 +529,5 @@ background: url(../images/icon/icon-loading.gif) no-repeat; background-position:
 .l-grid-detailpanel .l-editbox{ float:left; margin:2px;margin-left:6px; margin-right:10px;}
 .l-grid-detailpanel .l-button{float:left;margin:2px;margin-left:4px; margin-right:6px;}
 .l-grid-detailpanel .l-clear{ clear:both;}
-
  
 .l-grid-row-alt .l-grid-row-cell-rownumbers,.l-selected .l-grid-row-cell-rownumbers,.l-grid-row-over .l-grid-row-cell-rownumbers,.l-grid-row-cell-rownumbers{ background:#E0ECFF;}
-

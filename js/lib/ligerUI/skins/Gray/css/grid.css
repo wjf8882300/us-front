@@ -1,4 +1,4 @@
-﻿.l-scroll {
+.l-scroll {
 scrollbar-face-color: white;
 scrollbar-highlight-color: #D6D6D6;
 scrollbar-shadow-color: #D6D6D6;
@@ -8,17 +8,11 @@ scrollbar-track-color: white;
 scrollbar-darkshadow-color: white; 
 SCROLLBAR-BASE-COLOR:#F1F1F1;
 }
-
-
-/* -----------------------
-   * 表格 *
-* ----------------------- */
 .l-grid-loading
 {
     border:1px solid #D6D6D6;
     background-image: url('../images/ui/loading2.gif');
 }
-
 .l-panel {
     border: 1px solid #D6D6D6;
 }
@@ -77,16 +71,12 @@ padding-left: 15px;
 {
     height:22px; line-height:22px;
 }
-/*
-    detail
-*/
 .l-grid-row-cell-detail .l-grid-row-cell-inner span {
     background-image: url("../images/ui/grid-detail-close.gif");
 }
 .l-grid-row-cell-detail .l-grid-row-cell-inner span.l-open {
     background-image: url("../images/ui/grid-detail-open.gif");
 }
-
 .l-grid-detailpanel
 {
     border-right:1px solid #DFDFDF;border-bottom:1px solid #DFDFDF; 
@@ -95,7 +85,6 @@ padding-left: 15px;
 {
      overflow:auto; margin-bottom:2px;
 }
-
 .l-grid-row-alt .l-grid-row-cell
 {
     background:#F5F5F5 url('../images/ui/gridalt.gif') top repeat-x;
@@ -174,26 +163,14 @@ cursor: pointer;
 overflow: hidden;
 }
   
-/*
-    grouping
-*/
 .l-grid .l-grid-grouprow{ border-right:1px solid #DFDFDF}
 .l-grid .l-grid-grouprow-cell{ padding:6px; border-bottom:1px solid #DFDFDF; background:#EAF3FF;} 
 .l-grid .l-grid-totalsummary-group td{ background-color:#F5EEFB; border-color:#F5EEFB;}
-/*
-    foot total
-*/
  .l-panel-bar-total{ background:#F5F9FF; padding:8px; border-top:1px solid #84A0C4;}
-/*
-    tree grid 
-*/
 .l-grid-tree-space  
 {
     width:18px; height:20px; line-height:20px; overflow:hidden; float:left;
 }  
-/*
-    frozen grid
-*/
 .l-grid1{  display:none;} 
 .l-grid1 .l-grid-body{overflow:hidden;}
 .l-grid1 .l-grid-detailpanel{border-right:1px solid white;}
@@ -201,10 +178,6 @@ overflow: hidden;
 .l-frozen .l-grid2 .l-grid-body{overflow-x:auto;}
 .l-frozen .l-grid1{position:absolute; top:0px; left:0px;display:block;}
  
-
-/*
-    搜索栏
-*/
 .l-panel-search
 {height:28px; padding-top:3px; padding-left:3px; 
  border-left:1px solid #99BBE8; border-right:1px solid #99BBE8;
@@ -213,10 +186,6 @@ overflow: hidden;
 {
     float:left; margin-left:5px;
 }
-
-/*
-    编辑
-*/
 .l-grid-row-cell-editing-topcell {border-bottom-color:#B6B6B6;}
 .l-grid-row-cell-editing-leftcell {border-right-color:#B6B6B6;}
 .l-panel td.l-grid-row-cell-editing{ border-color:#B6B6B6; background:#EBF2FB url('../images/ui/grideditor.gif') top repeat-x;}
@@ -231,15 +200,8 @@ overflow: hidden;
 .l-grid-detailpanel .l-editbox{ float:left; margin:2px;margin-left:6px; margin-right:10px;}
 .l-grid-detailpanel .l-button{float:left;margin:2px;margin-left:4px; margin-right:6px;}
 .l-grid-detailpanel .l-clear{ clear:both;}
-
  
 .l-grid-row-alt .l-grid-row-cell-rownumbers,.l-selected .l-grid-row-cell-rownumbers,.l-grid-row-over .l-grid-row-cell-rownumbers,.l-grid-row-cell-rownumbers{ background:#F1F1F1; }
-
-
-/*
-    顶部工具条
-*/
-
 .l-panel-topbar{background:white url('../images/ui/gridbar.jpg') top repeat-x; height:31px;line-height:31px;border-bottom:1px solid #D6D6D6;  }
  
 .l-panel-btn {
@@ -248,9 +210,7 @@ cursor: pointer;
 line-height: 22px;
 text-align: center;
 }
-
 .l-toolbar-item,.l-bar-separator { margin-top:5px;}
-
 .l-bar-separator {
 border-left: 1px solid #D6D6D6;
 border-right: 1px solid white;
@@ -258,9 +218,6 @@ float: left;
 height: 13px;
 margin: 2px; margin-top:9px;
 }
-/*
-    工具条
-*/
 .l-panel .l-toolbar
 {    
     background:white  url('../images/ui/gridbar.jpg') repeat-x; height:28px;  line-height:28px;

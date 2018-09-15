@@ -1,4 +1,4 @@
-﻿.l-button { 
+.l-button { 
 	height: 23px;
 	overflow: hidden;
 	width: 70px;
@@ -8,7 +8,6 @@
 	 border:1px solid #D3D3D3; color:#333333;
 	background:url('../images/ui/button.gif') repeat-x center center;
 }
-
 .l-button-over,.l-button:hover {
 	background-image:url('../images/ui/button-over.gif'); border-color:#D3D3D3;
 }
