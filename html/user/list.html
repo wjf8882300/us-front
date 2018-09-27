@@ -4,7 +4,7 @@
 <title>用户管理</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-<link rel="stylesheet" href="../../css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="../../css/bootstrap-theme.min.css" />
 <link rel="stylesheet" href="../../css/fullcalendar.css" />
 <link rel="stylesheet" href="../../css/matrix-style.css" />
 <link rel="stylesheet" href="../../css/matrix-media.css" />
@@ -37,6 +37,24 @@
 	    overflow-x: hidden; 
 	    overflow-y: hidden;
 	}
+	
+	.fileinput-button {
+         position: relative;
+         display: inline-block;
+         overflow: hidden;
+     }
+
+     .fileinput-button input{
+         position: absolute;
+         left: 0px;
+         top: 0px;
+         opacity: 0;
+         -ms-filter: 'alpha(opacity=0)';
+     }
+     
+     .ui-wizard-content {
+     	width:100px;
+     }
 </style>
 </head>
 <body>
@@ -44,20 +62,43 @@
 			<form class="form-inline" id="searchForm" name="searchForm">
 				<div class="control-group">
                   <div class="controls">
-                    <label class="control-label">账号</label>
+                    <label class="control-label">姓名</label>
                     <input id="username" type="text" name="username" class="ui-wizard-content">
+                    <label class="control-label">学号</label>
+                    <input id="userno" type="text" name="userno" class="ui-wizard-content">
+                    <label class="control-label">用户类型</label>
+                    <select id="userType" class="ui-wizard-content">
+                    	  <option value="">全部</option>
+                    	  <option value="0">学生</option>
+					      <option value="1">支部书记</option>
+					      <option value="2">辅导员</option>
+                    </select>
+                    <label class="control-label">支部</label>
+                    <select id="teamname" class="ui-wizard-content">
+                    </select>
+                    <label class="control-label">班级</label>
+                    <select id="classname" class="ui-wizard-content">
+                    </select>
                     <input id="bntSearch" class="btn btn-primary ui-wizard-content ui-formwizard-button" type="button" value="查询">
+                    <input id="bntClear" class="btn btn-primary ui-wizard-content ui-formwizard-button" type="button" value="清空">
                   </div>
                 </div>	
-                <div class="control-group">  
-                  <div class="controls">
-	              <button type="button" class="btn btn-success" id="bntAdd">新增</button>
-	              <button type="button" class="btn btn-info" id="bntUpdate">编辑</button>
-	              <button type="button" class="btn btn-danger" id="bntDelete">删除</button>
-	              </div>
-                </div>	
+                	
 			</form>
-			
+			<form class="form-inline" id="uploadForm" name="uploadForm" enctype="multipart/form-data">
+			   <div class="control-group">  
+                  <div class="controls">
+                  <span class="btn btn-success fileinput-button" >
+			            <span>上传名单</span>
+			            <input type="file" id="ctn-input-file" name="file">
+			        </span>
+			      <span style="float:right">
+			      	<a href="../../template/学生信息.xlsx" class="btn btn-primary">下载学生信息模板</a>
+			      </span>
+			        
+	              </div>
+                </div>
+			</form>
 			<div id="maingrid4" style="margin:0; padding:0"></div> 
 	</div>
 	<script src="../../js/lib/requirejs/require.js" require-module="page/user/user" data-main="../../js/main.js"></script>	

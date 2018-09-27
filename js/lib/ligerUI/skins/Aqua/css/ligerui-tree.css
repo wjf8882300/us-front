@@ -1,7 +1,4 @@
-﻿
-/* --------------
-   *   tree  *
-* ------------ */
+
 .l-tree
 {
     margin:0; padding:0; list-style:none; overflow:hidden; position:relative; display:block; background:white;
@@ -37,12 +34,10 @@
 .l-tree .l-first .l-expandable-close{background-position:0px -22px;}
 .l-tree .l-last .l-expandable-close{ background-position:0px -66px;}
 .l-tree .l-onlychild  .l-expandable-close{background-position:0px 0px;}
-
 .l-tree .l-expandable-open{background-position:0px -132px;}
 .l-tree .l-first .l-expandable-open{background-position:0px -110px;}
 .l-tree .l-last .l-expandable-open{ background-position:0px -154px;}
 .l-tree .l-onlychild  .l-expandable-open{background-position:0px -88px;}
-
 .l-tree .l-over
 {
     background: none;
@@ -57,21 +52,16 @@
 }
 .l-tree .l-selected span{background: #D9E8FB; border:1px solid #B5CBEC; padding:0px 2px;height: 20px;
 line-height: 20px;}
-
 .l-tree .l-line{background-position:0px -176px;}
 .l-tree .l-note{ background-position:0px -198px;}
-
 .l-tree .l-note{ background-position:0px -198px;}
 .l-tree .l-note-last{ background-position:0px -220px;}
 .l-tree .l-checkbox-unchecked{ background-position:-22px 0px;} 
 .l-tree .l-checkbox-checked{ background-position:-22px -22px;} 
 .l-tree .l-checkbox-incomplete{ background-position:-22px -44px;} 
-
 .l-tree .l-over .l-checkbox-unchecked{ background-position:-44px 0px;} 
 .l-tree .l-over .l-checkbox-checked{ background-position:-44px -22px;} 
 .l-tree .l-over .l-checkbox-incomplete{ background-position:-44px -44px;} 
-
-
 .l-tree .l-tree-icon-folder{ background-position:-22px -88px;}
 .l-tree .l-tree-icon-none{ background:none;}
 .l-tree .l-tree-icon-none img{border: 0;height: 16px;width: 16px; top:2px; margin-top:2px; margin-left:2px;}

@@ -1,20 +1,8 @@
-﻿/*
-layout
-*/
+
 .l-layout-header{ height:25px; line-height:24px;  background:#E5EFFE url('../images/layout/layout-header.jpg') repeat-x; overflow:hidden;}
 .l-layout-header-over{background:#EFF4FE url('../images/layout/layout-header-over.jpg') repeat-x;} 
-
-/* 
-accordion
-*/
-
 .l-accordion-header{ position:relative;padding-left:10px; color:#183152; font-weight:bold;height:25px; line-height:24px;  background:url('../images/layout/accordion-header.jpg') repeat-x; overflow:hidden; cursor:pointer;}
 .l-accordion-header-over{background:url('../images/layout/accordion-header-over.jpg') repeat-x;} 
-
-/*
-tab
-*/
-
 .l-tab-links{background:url('../images/layout/tabs-bg.jpg') repeat-x; }
 .l-tab-links-left{background:url(../images/layout/tabs-tools.gif) 0px 0px; }
 .l-tab-links-right{background:url(../images/layout/tabs-tools.gif) -51px 0px;}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>评分管理</title>
+<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../../css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="../../css/fullcalendar.css" />
+<link rel="stylesheet" href="../../css/matrix-style.css" />
+<link rel="stylesheet" href="../../css/matrix-media.css" />
+<link rel="stylesheet" href="../../font-awesome/css/font-awesome.css"  />
+<link rel="stylesheet" href="../../css/jquery.gritter.css" />
+<link rel="stylesheet" href="../../js/lib/ligerUI/skins/Aqua/css/ligerui-all.css" />
+<link rel="stylesheet" href="../../js/lib/ligerUI/skins/Gray2014/css/all.css" />
+<style>
+	body{
+		background-color: #ffffff;
+	}
+	#wrapper{
+	  	position: relative;
+	 	margin: 0;
+	  	padding: 8px 20px 0px;
+	    -webkit-transform: translate3d(0, 0, 0); 
+	    -moz-transform: translate3d(0, 0, 0); 
+	    -ms-transform: translate3d(0, 0, 0); 
+	    transform: translate3d(0, 0, 0); 
+	    -webkit-backface-visibility: hidden; 
+	    -moz-backface-visibility: hidden; 
+	    -ms-backface-visibility: hidden; 
+	    backface-visibility: hidden; 
+	 
+	    -webkit-perspective: 1000; 
+	    -moz-perspective: 1000; 
+	    -ms-perspective: 1000; 
+	    perspective: 1000;
+	    
+	    overflow-x: hidden; 
+	    overflow-y: hidden;
+	}
+	
+	.ui-wizard-content {
+     	width:100px;
+     }
+</style>
+</head>
+<body>
+	<div id="wrapper">
+			<form class="form-inline" id="searchForm" name="searchForm">
+				<div class="control-group">
+                  <div class="controls">
+                    <label class="control-label">姓名</label>
+                    <input id="username" type="text" name="userName" class="ui-wizard-content">
+                    <label class="control-label">学号</label>
+                    <input id="userno" type="text" name="userNo" class="ui-wizard-content">
+                    <label class="control-label">支部</label>
+                    <select class="ui-wizard-content" name="teamName" id="teamname">
+                    </select>
+                    <label class="control-label">班级</label>
+                    <select class="ui-wizard-content" name="className" id="classname">
+                    </select>
+                    <input id="bntSearch" class="btn btn-primary ui-wizard-content ui-formwizard-button" type="button" value="查询">
+                    <input id="bntClear" class="btn btn-primary ui-wizard-content ui-formwizard-button" type="button" value="清空">
+                  </div>
+                </div>
+                <div class="control-group">  
+                  <div class="controls">
+	              <button type="button" class="btn btn-success" id="bntExportStudent">导出学生评分</button>
+	              <button type="button" class="btn btn-info" id="bntExportLeader">导出支部书记评分</button>
+	              <button type="button" class="btn btn-danger" id="bntExportTeacher">导出辅导员评分</button>
+	              </div>
+                </div>	
+			</form>
+			
+			<!-- <div id="maingrid4" style="margin:0; padding:0"></div> -->
+			<ul id="myTab" class="nav nav-tabs">
+			    <li class="active"><a href="#student" data-toggle="tab">学生评分</a></li>
+			    <li><a href="#leader" data-toggle="tab">支部书记评分</a></li>
+			    <li><a href="#teacher" data-toggle="tab">辅导员评分</a></li>
+			</ul>
+			<div id="myTabContent" class="tab-content">
+			    <div class="tab-pane fade in active" id="student">
+			        <div id="maingrid1" style="margin:0; padding:0"></div>
+			    </div>
+			    <div class="tab-pane fade" id="leader">
+			        <div id="maingrid2" style="margin:0; padding:0"></div>
+			    </div>
+			    <div class="tab-pane fade" id="teacher">
+			        <div id="maingrid3" style="margin:0; padding:0"></div>
+			    </div>
+			</div> 
+	</div>
+	<script src="../../js/lib/requirejs/require.js" require-module="page/score/score" data-main="../../js/main.js"></script>	
+</body>
+</html>

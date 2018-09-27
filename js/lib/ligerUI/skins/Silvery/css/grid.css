@@ -1,6 +1,3 @@
-﻿/*
-   表格
-*/
 
 .l-grid-header
 {
@@ -37,17 +34,12 @@
 }
 .l-grid .l-grid-grouprow{ border-right:1px solid #ddd}
 .l-grid .l-grid-totalsummary-group td{ background-color:#EBDDF7;}
-
 .l-scroll
 {
         scrollbar-face-color:#DBDBDB; scrollbar-3dlight-color:#C1C1C1; scrollbar-darkshadow-color:#C1C1C1;
         scrollbar-base-color:#C1C1C1;
         scrollbar-shadow-color: #FFF; scrollbar-highlight-color: #FFF;  scrollbar-track-color:#FFF; scrollbar-arrow-color:#4A6184;
 }
-
-/*
-    工具条
-*/
 .l-toolbar
 {     
     border:1px solid #9CBAE7;  border-top:1px solid #EFF7F7;

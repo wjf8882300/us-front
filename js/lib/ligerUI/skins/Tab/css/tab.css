@@ -1,6 +1,4 @@
-﻿/* -----------------------
-   * tab *
-* ----------------------- */
+
 .l-tab-links
 {
     background: none;border:none;
@@ -25,12 +23,7 @@
 .l-tab-links li:first-child { border-top-left-radius: 2px; }
 .l-tab-links li:last-child { border-top-right-radius: 2px; }
 .l-tab-links li.l-selected { height: 30px; line-height: 30px; top: -2px; z-index: 10; border: 1px solid #CCC; border-bottom: 1px solid #f4f4f4; z-index: 10; border-top-left-radius: 2px; border-top-right-radius: 2px; background: #f4f4f4;
-/*background: -moz-linear-gradient(top, #fcfcfc, #f4f4f4); 
-background: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfc), to(#f4f4f4)); 
-background: -o-linear-gradient(top, #fcfcfc, #f4f4f4);
-background: -ms-linear-gradient(top, #fcfcfc 0%,#f4f4f4 100%); 
-background: linear-gradient(top, #fcfcfc, #f4f4f4); 
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f4f4f4');*/}
+}
 .l-tab-links li a { display: block; margin: 0 30px 0 10px; text-decoration: none; color: #aaa; -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; -khtml-user-select: none; user-select: none; }
 .l-tab-links li.l-selected a { color: #333; font-size: 14px; font-weight: bold; }
 .l-tab-links-item-left, .l-tab-links-item-right { display: none; }
